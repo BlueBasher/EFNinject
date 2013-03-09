@@ -1,0 +1,20 @@
+﻿@model IEnumerable<EFNinjectApplication.CrossCutting.Models.Customer>
+
+<header>
+    <div class="content-wrapper">
+        <div class="float-left">
+            <p class="site-title">
+                <a href="~/">EFNinjectApplication</a></p>
+        </div>
+    </div>
+</header>
+<div id="body">
+    <section class="content-wrapper main-content clear-fix">
+        <ul>
+        @foreach (var customer in Model)
+        {
+            <li>@(string.Format("{0} {1}", customer.FirstName, customer.LastName))</li>
+        }
+        </ul>
+    </section>
+</div>
